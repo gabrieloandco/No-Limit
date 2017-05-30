@@ -8,8 +8,8 @@
 	var mainState = {
 		preload : function(){
 			this.game.load.image('bullet','assets/bullet.png');
-			this.game.load.image('bgSpace','assets/farback.jpg');
-			this.game.load.image('bgSpace2','assets/starfield.png');
+			this.game.load.image('background','assets/farback.jpg');
+			this.game.load.image('background2','assets/starfield.png');
 			this.game.load.spritesheet('ship','assets/Spritesheet_64x29.png',64,29,4);
 			this.game.load.spritesheet("enemyship1","assets/eSpritesheet_40x30.png",40, 30, 6);
 			this.game.load.spritesheet("enemyship2","assets/eSpritesheet_40x30_hue1.png",40, 30, 6);
@@ -33,13 +33,13 @@
 
 			this.game.physics.startSystem(Phaser.Physics.ARCADE);
 
-			this.bg = this.game.add.tileSprite(0,0,1782,600,'bgSpace');
+			this.bg = this.game.add.tileSprite(0,0,1782,600,'background');
 			this.bg.autoScroll(-this.bg1Speed,0);
 
-			this.bg2 = this.game.add.tileSprite(0,0,800,601,'bgSpace2');
+			this.bg2 = this.game.add.tileSprite(0,0,800,601,'background2');
 			this.bg2.autoScroll(-this.bg2Speed,0);
 
-			this.bg3 = this.game.add.tileSprite(0,0,800,601,'bgSpace2');
+			this.bg3 = this.game.add.tileSprite(0,0,800,601,'background2');
 			this.bg3.autoScroll(-this.bg3Speed,0);
 
 			this.ship = this.game.add.sprite(10,HEIGHT/2, 'ship');
@@ -165,20 +165,20 @@
 
 	var menuState = {
 		preload : function(){
-			this.game.load.image('bgSpace','assets/farback.jpg')
+			this.game.load.image('background','assets/farback.jpg')
 		},
 
 		create : function(){
 			this.speed = 10;
 
-			this.bg = this.game.add.tileSprite(0,0,1782,600,'bgSpace');
+			this.bg = this.game.add.tileSprite(0,0,1782,600,'background');
 			this.bg.autoScroll(-this.speed,0);
 
 			var style = { font: "48px Arial", fill: "#DE5F3D", align: "center" };
-			this.title = this.game.add.text(250,170,"Space Shooter",style);
+			this.title = this.game.add.text(250,170,"No Limit",style);
 
 			var style2 = { font: "28px Arial", fill: "#DE5F3D", align: "center" };
-			this.help = this.game.add.text(250,230,"Press `Enter` Key to start",style2);
+			this.help = this.game.add.text(250,230,"Oprime Enter para empezar",style2);
 		},
 
 		update : function(){
